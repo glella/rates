@@ -5,26 +5,31 @@ Saves CSV file in the same directory as executable.
 
 Versions in Python and Go. Soon in Rust.
 
-#Comments on Python version:
+Comments on Python version:
 - Uses pandas library. It needs to be installed first. Can be done with pip like this:
 
 	pip install --upgrade pip
 	
 	pip install pandas
 
+
 - Can be run as an interpreted script or as an executable created with pyinstaller.
 That is why the code checks for if it is being run frozen (as part of executable) or not to properly check where to save CSV.
 
 - Pyinstaller can be installed with:
+
 pip install pyinstaller
 
+
 - Executable can be created easily with:
+
 pyinstaller rates.py --name rates --onefile
+
 
 - If running frozen (as part of executable) needs ssl & certifi to be able to access internet due to permissions in other computers. Hope this is the right way to solve this. Not 100% sure.
 
 
-#Comments on Go version:
+Comments on Go version:
 - It was refreshing to get an executable and it to work flawlessly in any computer with no fuss unlike Python (when the recipient is not a developer and does not have everything setup as we do).
 
 - I am learning Go and this exercise was done to hack a bit in it, so it is not great coding.
