@@ -7,7 +7,9 @@ Versions in Python and Go. Soon in Rust.
 
 #Comments on Python version:
 - Uses pandas library. It needs to be installed first. Can be done with pip like this:
+
 	pip install --upgrade pip
+	
 	pip install pandas
 
 - Can be run as an interpreted script or as an executable created with pyinstaller.
