@@ -18,12 +18,12 @@ That is why the code checks for if it is being run frozen (as part of executable
 
 - Pyinstaller can be installed with:
 
-pip install pyinstaller
+	pip install pyinstaller
 
 
 - Executable can be created easily with:
 
-pyinstaller rates.py --name rates --onefile
+	pyinstaller rates.py --name rates --onefile
 
 
 - If running frozen (as part of executable) needs ssl & certifi to be able to access internet due to permissions in other computers. Hope this is the right way to solve this. Not 100% sure.
