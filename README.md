@@ -7,7 +7,7 @@ Versions in Python, Go and Rust.
 
 Wrote them in that exact order:
 - Very quickly got it done in Python running as script. Pulled quite a few hairs to get it running smoothly as a frozen executable in somebody else's computer.
-- Refreshing simple to code it in Go despite being new to the language. Took the same time to get it done as in Python.
+- Refreshingly simple to code it in Go despite being new to the language. Took the same time to get it done as in Python.
 - Straightforward implementation in Rust although had to pay deeper attention to ownership details. Took twice as long to code compared to Go and Python.
 
 Executable sizes:
