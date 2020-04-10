@@ -11,6 +11,7 @@ Wrote them in that exact order:
 - Straightforward implementation in Rust although had to pay deeper attention to ownership details. Took twice as long to code compared to Go and Python.
 
 Executable sizes:
+
 Python 30.4 MB (pyinstaller frozen executable)
 
 Go	7.3 MB
