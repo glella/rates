@@ -217,7 +217,7 @@ struct Historical {
 #[serde(rename_all = "UPPERCASE")]
 struct Rates {
     aed: f64,
-	afn: f64,
+    afn: f64,
     all: f64,
     amd: f64,
     ang: f64,
