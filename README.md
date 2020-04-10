@@ -55,7 +55,8 @@ Comments on Rust version:
 - Same approach as in Go. The feeling of "if it compiles, it works - no surprises" is awesome.
 
 - It took me twice as long to code as the Go version despite knowing exactly what I wanted to do.
-Example: the transpose fucntion was originally written with &str instead of Strings, but after downloading the data got into ownership/borrowing issues, so I had to solve that by migrating a few functions to use Strings instead of &str in a domino effect.
+
+Example: the transpose function was originally written with &str instead of Strings, but after downloading the data got into ownership/borrowing issues, so I had to solve that by migrating a few functions to use Strings instead of &str in a domino effect.
 
 - Definitely my favorite language but it takes some time to iron everything out. It is very efficient in terms of size and speed. The feeling of its executable being bulletproof is great.
 
