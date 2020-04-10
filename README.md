@@ -1,4 +1,4 @@
-# Simple Utility to download exchange rates from openechangerates.org and save them to CSV file
+# Simple Utility to download exchange rates from openexchangerates.org and save them to CSV file
 
 Downloads rates for the last business day of the month, for each month year to date and previous year.
 Saves them to a CSV file in the same directory as executable.
