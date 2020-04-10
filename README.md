@@ -12,8 +12,11 @@ Wrote them in that exact order:
 
 Executable sizes:
 Python 30.4 MB (pyinstaller frozen executable)
-Go		7.3 MB
+
+Go	7.3 MB
+
 Rust	3.6 MB
+
 
 Comments on Python version:
 - Uses pandas library. It needs to be installed first. Can be done with pip like this:
