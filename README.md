@@ -1,9 +1,19 @@
 # Simple Utility to download exchange rates from openechangerates.org and save them to CSV file
 
 Downloads rates for the last business day of the month, for each month year to date and previous year.
-Saves CSV file in the same directory as executable.
+Saves them to a CSV file in the same directory as executable.
 
-Versions in Python and Go. Soon in Rust.
+Versions in Python, Go and Rust.
+
+Wrote them in that exact order:
+- Very quickly got it done in Python running as script. Pulled quite a few hairs to get it running smoothly as a frozen executable in somebody else's computer.
+- Refreshing simple to code it in Go despite being new to the language. Took the same time to get it done as in Python.
+- Straightforward implementation in Rust although had to pay deeper attention to ownership details. Took twice as long to code compared to Go and Python.
+
+Executable sizes:
+Python 30.4 MB (pyinstaller frozen executable)
+Go		7.3 MB
+Rust	3.6 MB
 
 Comments on Python version:
 - Uses pandas library. It needs to be installed first. Can be done with pip like this:
@@ -14,7 +24,7 @@ Comments on Python version:
 
 
 - Can be run as an interpreted script or as an executable created with pyinstaller.
-That is why the code checks for if it is being run frozen (as part of executable) or not to properly check where to save CSV.
+That is why the code checks for if it is being run frozen (as part of executable) or not, to properly check where to save CSV.
 
 - Pyinstaller can be installed with:
 
@@ -32,11 +42,18 @@ That is why the code checks for if it is being run frozen (as part of executable
 Comments on Go version:
 - It was refreshing to get an executable and it to work flawlessly in any computer with no fuss unlike Python (when the recipient is not a developer and does not have everything setup as we do).
 
-- I am learning Go and this exercise was done to hack a bit in it, so it is not great coding.
+- Instead of relying on libraries like I did in the Python version with pandas, in Go we calculated by hand the dates of the monthly last business days, and the transposing of the data (columns for rows).
 
-- Strugled in particular to get rates from the struct into an array looping through the list of rates I wanted. Resorted to a brute force repeat of the same command +20 times.
+- Language of choice to quickly hack something together because of simplicity.
 
-- Another bad tecnique is that I invoked time.Now() everywhere instead of passing it around. That was mostly lazyness.
 
-- Other than that it seems to work very well. Instead of relying on libraries like I did in the Python version with pandas, in Go we calculated by hand the dates of the monthly last business days and the transposing of the data (columns for rows).
+Comments on Rust version:
+- Same approach as in Go. The feeling of "if it compiles, it works - no surprises" is awesome.
+
+- It took me twice as long to code as the Go version despite knowing exactly what I wanted to do.
+Example: the transpose fucntion was originally written with &str instead of Strings, but after downloading the data got into ownership/borrowing issues, so I had to solve that by migrating a few functions to use Strings instead of &str in a domino effect.
+
+- Definitely my favorite language but it takes some time to iron everything out. It is very efficient in terms of size and speed. The feeling of its executable being bulletproof is great.
+
+
 
